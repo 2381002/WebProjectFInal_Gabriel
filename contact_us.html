@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Us - Triputra Group Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add focus effect for form inputs */
+        input:focus, select:focus, textarea:focus {
+            outline: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Header Section -->
+    <header class="flex justify-between items-center bg-white shadow-md px-5 py-3">
+        <div class="logo">
+            <img src="images/logo.png" alt="Triputra Logo" class="h-12">
+        </div>
+        <nav class="navbar hidden md:flex">
+            <ul class="flex space-x-4 text-sm font-medium">
+                <li><a href="index.html" class="hover:bg-blue-500 hover:text-white transition-colors px-3 py-2 rounded">HOME</a></li>
+                <li><a href="biodata.html" class="hover:bg-blue-500 hover:text-white transition-colors px-3 py-2 rounded">BIODATA</a></li>
+                <li><a href="contact_us.html" class="hover:bg-blue-500 hover:text-white transition-colors px-3 py-2 rounded">CONTACT US</a></li>
+                <li><a href="posts.html" class="hover:bg-blue-500 hover:text-white transition-colors px-3 py-2 rounded">POSTS</a></li>
+                <li><a href="freepage.html" class="hover:bg-blue-500 hover:text-white transition-colors px-3 py-2 rounded">FREEPAGE</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger Icon -->
+        <div class="md:hidden flex items-center">
+            <button id="hamburger" class="text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-gray-800 bg-opacity-50 z-20 hidden">
+        <div class="bg-white w-4/5 h-full p-4">
+            <ul class="space-y-4 text-lg font-medium">
+                <li><a href="index.html" class="block text-gray-800 hover:text-blue-500">HOME</a></li>
+                <li><a href="biodata.html" class="block text-gray-800 hover:text-blue-500">BIODATA</a></li>
+                <li><a href="contact_us.html" class="block text-gray-800 hover:text-blue-500">CONTACT US</a></li>
+                <li><a href="posts.html" class="block text-gray-800 hover:text-blue-500">POSTS</a></li>
+                <li><a href="freepage.html" class="block text-gray-800 hover:text-blue-500">FREE PAGE</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact Us Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="max-w-6xl mx-auto bg-white rounded-lg shadow-lg p-8">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-extrabold text-gray-800">Student Registration Form</h1>
+                <p class="text-lg text-gray-600 mt-2">Please fill in the form below to register.</p>
+            </div>
+            <form id="registration-form">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Full Name -->
+                    <div>
+                        <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" class="input input-bordered w-full mt-2 focus:ring-2 focus:ring-green-500 border-gray-300 shadow-sm focus:outline-none p-3 rounded-lg" placeholder="Masukkan nama" required>
+                    </div>
+                    
+                    <!-- Student ID (NIM) -->
+                    <div>
+                        <label for="student-id" class="block text-sm font-medium text-gray-700">Student ID (NIM)</label>
+                        <input type="text" id="student-id" name="student-id" class="input input-bordered w-full mt-2 focus:ring-2 focus:ring-green-500 border-gray-300 shadow-sm focus:outline-none p-3 rounded-lg" placeholder="123456789" required>
+                    </div>
+
+                    <!-- Email Address -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" id="email" name="email" class="input input-bordered w-full mt-2 focus:ring-2 focus:ring-green-500 border-gray-300 shadow-sm focus:outline-none p-3 rounded-lg" placeholder="example@email.com" required>
+                    </div>
+
+                    <!-- Faculty/Major -->
+                    <div>
+                        <label for="faculty" class="block text-sm font-medium text-gray-700">Faculty/Major</label>
+                        <select id="faculty" name="faculty" class="input input-bordered w-full mt-2 focus:ring-2 focus:ring-green-500 border-gray-300 shadow-sm focus:outline-none p-3 rounded-lg" required>
+                            <option value="" disabled selected>Select Faculty/Major</option>
+                            <option value="Faculty of Technology">Faculty of Technology</option>
+                            <option value="Faculty of Economy">Faculty of Economy</option>
+                            <option value="Faculty of Education">Faculty of Education</option>
+                            <option value="Faculty of Philosophy">Faculty of Philosophy</option>
+                            <option value="Faculty of Mathematics and Science">Faculty of Mathematics and Science</option>
+                            <option value="Faculty of Nursing">Faculty of Nursing</option>
+                        </select>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div>
+                        <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" class="input input-bordered w-full mt-2 focus:ring-2 focus:ring-green-500 border-gray-300 shadow-sm focus:outline-none p-3 rounded-lg" required>
+                    </div>
+
+                    <!-- Gender -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Gender</label>
+                        <div class="flex items-center space-x-6 mt-2">
+                            <label>
+                                <input type="radio" name="gender" value="Male" class="radio radio-primary" required>
+                                Male
+                            </label>
+                            <label>
+                                <input type="radio" name="gender" value="Female" class="radio radio-primary" required>
+                                Female
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="col-span-2">
+                        <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                        <textarea id="address" name="address" class="input input-bordered w-full mt-2 focus:ring-2 focus:ring-green-500 border-gray-300 shadow-sm focus:outline-none p-3 rounded-lg" rows="3" placeholder="Jl. Kenanga No. 12" required></textarea>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <input type="text" id="phone" name="phone" class="input input-bordered w-full mt-2 focus:ring-2 focus:ring-green-500 border-gray-300 shadow-sm focus:outline-none p-3 rounded-lg" pattern="[0-9]{13}" required placeholder="082123456789">
+                        <small class="text-xs text-red-500">Enter a valid phone number (13 digits)</small>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center mt-8">
+                    <button type="submit" class="btn btn-primary px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6">
+            <!-- Column 1: Triputra Group Info -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Triputra Group</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="https://fti.unai.edu/" class="hover:text-blue-400 transition duration-300">FTI UNAI</a></li>
+                    <li><a href="https://unai.edu/" class="hover:text-blue-400 transition duration-300">Universitas Advent Indonesia</a></li>
+                    <li><a href="https://jurnal.unai.edu/index.php/teika" class="hover:text-blue-400 transition duration-300">Jurnal Teika</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: About Us -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">About Us</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-blue-400 transition duration-300">Our Mission</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition duration-300">Careers</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition duration-300">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Contact Us</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="mailto:info@triputragroup.com" class="hover:text-blue-400 transition duration-300">info@triputragroup.com</a></li>
+                    <li><a href="tel:+123456789" class="hover:text-blue-400 transition duration-300">+1 234 567 89</a></li>
+                    <li><a href="https://goo.gl/maps/xyz" class="hover:text-blue-400 transition duration-300">Our Office</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Newsletter</h3>
+                <p class="text-sm mb-4">Subscribe to our newsletter to receive updates and news.</p>
+                <input type="email" placeholder="Your email" class="px-4 py-2 bg-gray-700 text-white rounded-md w-full mb-4" />
+                <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300">Subscribe</button>
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+            <p class="text-sm">&copy; 2024 Triputra Group. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script for Hamburger Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            body.classList.toggle('overflow-hidden');  // Prevent scrolling when menu is open
+        });
+
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+                body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+
+    <!-- JavaScript for Form Validation -->
+    <script>
+        const form = document.getElementById("registration-form");
+
+        form.addEventListener("submit", function(event) {
+            // Prevent form submission if validation fails
+            event.preventDefault();
+
+            // Get form fields
+            const fullName = document.getElementById("full-name").value;
+            const studentId = document.getElementById("student-id").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+
+            // Simple validation
+            if (!fullName || !studentId || !email || !phone || !document.querySelector('input[name="gender"]:checked') || !document.getElementById("faculty").value || !document.getElementById("dob").value) {
+                alert("Please fill all the required fields!");
+                return;
+            }
+
+            // Email validation
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address!");
+                return;
+            }
+
+            // Phone validation (only numbers)
+            const phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid phone number (10 digits).");
+                return;
+            }
+
+            // Form submission
+            alert("Registration Successful!");
+            form.reset(); // Clear the form after submission
+        });
+    </script>
+
+</body>
+</html>

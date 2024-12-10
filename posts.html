@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Posts - Triputra Group Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Header Section -->
+    <header class="flex justify-between items-center bg-white shadow-md px-5 py-3">
+        <div class="logo">
+            <img src="images/logo.png" alt="Triputra Logo" class="h-12">
+        </div>
+        <nav class="navbar hidden md:flex">
+            <ul class="flex space-x-4 text-sm font-medium">
+                <li><a href="index.html" class="hover:bg-blue-500 hover:text-white transition-colors px-3 py-2 rounded">HOME</a></li>
+                <li><a href="biodata.html" class="hover:bg-blue-500 hover:text-white transition-colors px-3 py-2 rounded">BIODATA</a></li>
+                <li><a href="contact_us.html" class="hover:bg-blue-500 hover:text-white transition-colors px-3 py-2 rounded">CONTACT US</a></li>
+                <li><a href="posts.html" class="hover:bg-blue-500 hover:text-white transition-colors px-3 py-2 rounded">POSTS</a></li>
+                <li><a href="freepage.html" class="hover:bg-blue-500 hover:text-white transition-colors px-3 py-2 rounded">FREEPAGE</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger Icon -->
+        <div class="md:hidden flex items-center">
+            <button id="hamburger" class="text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-gray-800 bg-opacity-50 z-20 hidden">
+        <div class="bg-white w-4/5 h-full p-4">
+            <ul class="space-y-4 text-lg font-medium">
+                <li><a href="index.html" class="block text-gray-800 hover:text-blue-500">HOME</a></li>
+                <li><a href="biodata.html" class="block text-gray-800 hover:text-blue-500">BIODATA</a></li>
+                <li><a href="contact_us.html" class="block text-gray-800 hover:text-blue-500">CONTACT US</a></li>
+                <li><a href="posts.html" class="block text-gray-800 hover:text-blue-500">POSTS</a></li>
+                <li><a href="freepage.html" class="block text-gray-800 hover:text-blue-500">FREE PAGE</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Posts Section -->
+    <section class="py-10 bg-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Posts</h1>
+
+            <div id="posts-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Posts will be displayed here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6">
+            <!-- Column 1: Triputra Group Info -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Triputra Group</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="https://fti.unai.edu/" class="hover:text-blue-400 transition duration-300">FTI UNAI</a></li>
+                    <li><a href="https://unai.edu/" class="hover:text-blue-400 transition duration-300">Universitas Advent Indonesia</a></li>
+                    <li><a href="https://jurnal.unai.edu/index.php/teika" class="hover:text-blue-400 transition duration-300">Jurnal Teika</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2: About Us -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">About Us</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-blue-400 transition duration-300">Our Mission</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition duration-300">Careers</a></li>
+                    <li><a href="#" class="hover:text-blue-400 transition duration-300">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Contact Us</h3>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="mailto:info@triputragroup.com" class="hover:text-blue-400 transition duration-300">info@triputragroup.com</a></li>
+                    <li><a href="tel:+123456789" class="hover:text-blue-400 transition duration-300">+1 234 567 89</a></li>
+                    <li><a href="https://goo.gl/maps/xyz" class="hover:text-blue-400 transition duration-300">Our Office</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Newsletter -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-4">Newsletter</h3>
+                <p class="text-sm mb-4">Subscribe to our newsletter to receive updates and news.</p>
+                <input type="email" placeholder="Your email" class="px-4 py-2 bg-gray-700 text-white rounded-md w-full mb-4" />
+                <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300">Subscribe</button>
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+            <p class="text-sm">&copy; 2024 Triputra Group. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script for Hamburger Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            body.classList.toggle('overflow-hidden');  // Prevent scrolling when menu is open
+        });
+
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+                body.classList.remove('overflow-hidden');
+            }
+        });
+    </script>
+
+    <!-- Script for Fetching Posts -->
+    <script>
+        // Replace 'xx' with the last two digits of your NIM (for example, 02)
+        const postId = '2'; // Change this to your NIM's last two digits
+        const url = `https://jsonplaceholder.typicode.com/posts/${postId}`;
+
+        // Function to fetch data from the API and display it
+        async function fetchPost() {
+            try {
+                const response = await fetch(url);
+                const post = await response.json();
+
+                // Get the container to display posts
+                const postsContainer = document.getElementById('posts-container');
+
+                // Create a card for the post
+                const postCard = document.createElement('div');
+                postCard.classList.add('bg-white', 'p-6', 'rounded-lg', 'shadow-lg', 'hover:shadow-xl', 'transition-shadow', 'duration-200');
+
+                // Add post content to the card
+                postCard.innerHTML = `
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">${post.title}</h2>
+                    <p class="text-gray-600 mb-4">${post.body}</p>
+                    <span class="text-sm text-gray-500">Post ID: ${post.id}</span>
+                `;
+
+                // Append the post card to the container
+                postsContainer.appendChild(postCard);
+            } catch (error) {
+                console.error("Error fetching post:", error);
+            }
+        }
+
+        // Fetch and display the post when the page loads
+        window.onload = fetchPost;
+    </script>
+
+</body>
+</html>
